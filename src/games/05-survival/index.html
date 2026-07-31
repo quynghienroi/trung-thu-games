@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thỏ Ngọc Chạy Trốn - Đêm Hội Trăng Rằm</title>
+  
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="../../styles/reset.css">
+  <link rel="stylesheet" href="../../styles/variables.css">
+  <link rel="stylesheet" href="../../styles/base.css">
+  <link rel="stylesheet" href="../../styles/animations.css">
+  <link rel="stylesheet" href="../../styles/components.css">
+  
+  <!-- Game Specific Styles -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    
+    <!-- Virtual Joystick (hidden on desktop) -->
+    <div id="virtual-joystick-container">
+      <div id="virtual-joystick-base">
+        <div id="virtual-joystick-stick"></div>
+      </div>
+    </div>
+    
+    <div id="ui-overlay"></div>
+  </div>
+
+  <!-- Shared Modifiers logic -->
+  <script type="module" src="../../core/modifier.js"></script>
+  
+  <!-- Game Logic -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

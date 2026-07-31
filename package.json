@@ -1,0 +1,15 @@
+{
+  "name": "trung-thu-games",
+  "private": true,
+  "version": "1.0.0",
+  "description": "🏮 Đêm Hội Trăng Rằm - 5 Mini Games cho Gian Hàng Trung Thu",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

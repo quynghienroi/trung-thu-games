@@ -523,9 +523,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   
   try {
-      window.gameSprites.mouse = await loadSprite('../../assets/mouse.jpg');
-      window.gameSprites.mouse_gold = await loadSprite('../../assets/mouse_gold.jpg');
-      window.gameSprites.bunny = await loadSprite('../../assets/bunny.jpg');
+      window.gameSprites.mouse = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+      window.gameSprites.mouse_gold = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+      window.gameSprites.bunny = await loadSprite(import.meta.env.BASE_URL + 'assets/');
   } catch(e) { console.error('Lỗi tải ảnh:', e); }
   
   new Game();

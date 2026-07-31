@@ -323,14 +323,14 @@ function loadSprite(src) {
 window.gameSprites = {};
 async function preload() {
     try {
-        window.gameSprites.mooncake = await loadSprite('../../assets/mooncake.jpg');
-        window.gameSprites.lantern = await loadSprite('../../assets/lantern.jpg');
-        window.gameSprites.bunny = await loadSprite('../../assets/bunny.jpg');
-        window.gameSprites.moon = await loadSprite('../../assets/moon.jpg');
-        window.gameSprites.bamboo = await loadSprite('../../assets/bamboo.jpg');
-        window.gameSprites.dragon = await loadSprite('../../assets/dragon.jpg');
-        window.gameSprites.mouse = await loadSprite('../../assets/mouse.jpg');
-        window.gameSprites.star = await loadSprite('../../assets/star.jpg');
+        window.gameSprites.mooncake = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        window.gameSprites.lantern = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        window.gameSprites.bunny = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        window.gameSprites.moon = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        window.gameSprites.bamboo = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        window.gameSprites.dragon = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        window.gameSprites.mouse = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        window.gameSprites.star = await loadSprite(import.meta.env.BASE_URL + 'assets/');
     } catch(e) {
         console.error('Lỗi tải ảnh:', e);
     }

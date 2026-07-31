@@ -525,12 +525,12 @@ function showStartScreen() {
 
 async function initGame() {
     try {
-        sprites.basket = await loadSprite('../../assets/basket.jpg');
-        sprites.mooncake = await loadSprite('../../assets/mooncake.jpg');
-        sprites.lantern = await loadSprite('../../assets/lantern.jpg');
-        sprites.star = await loadSprite('../../assets/star.jpg');
-        sprites.bomb = await loadSprite('../../assets/bomb.jpg');
-        sprites.rock = await loadSprite('../../assets/rock.jpg');
+        sprites.basket = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        sprites.mooncake = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        sprites.lantern = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        sprites.star = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        sprites.bomb = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        sprites.rock = await loadSprite(import.meta.env.BASE_URL + 'assets/');
     } catch(e) {
         console.error('Lỗi tải ảnh:', e);
     }

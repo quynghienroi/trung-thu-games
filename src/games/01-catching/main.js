@@ -389,7 +389,7 @@ function startGame() {
     backBtn.style.cursor = 'pointer';
     backBtn.style.backdropFilter = 'blur(4px)';
     backBtn.innerText = 'Trở Về';
-    backBtn.onclick = () => if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
+    backBtn.onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
     uiOverlay.appendChild(backBtn);
     
     let timerInterval = setInterval(() => {

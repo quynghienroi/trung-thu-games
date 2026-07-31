@@ -464,7 +464,7 @@ function startGame() {
     backBtn.style.cursor = 'pointer';
     backBtn.style.backdropFilter = 'blur(4px)';
     backBtn.innerText = 'Trở Về';
-    backBtn.onclick = () => if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
+    backBtn.onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
     uiOverlay.appendChild(backBtn);
 }
 
@@ -561,7 +561,7 @@ function showStartScreen() {
     uiOverlay.appendChild(overlay);
     
     document.getElementById('start-btn').onclick = startGame;
-    document.getElementById('back-btn-start').onclick = () => if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
+    document.getElementById('back-btn-start').onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
 }
 
 async function initGame() {

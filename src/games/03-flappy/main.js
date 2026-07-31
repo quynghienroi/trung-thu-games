@@ -183,7 +183,7 @@ function showGameOver() {
       document.getElementById('leaderboard-view-section').style.display = 'block';
   });
   
-  document.getElementById('btn-home')?.addEventListener('click', () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; } });
+  document.getElementById('btn-home')?.addEventListener('click', () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; } };);
   createBackButton();
 }
 

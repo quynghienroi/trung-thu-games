@@ -115,9 +115,7 @@ function initGame() {
     <div class="memory-board" id="board"></div>
   `;
   
-  document.getElementById('back-btn').addEventListener('click', () => {
-    if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
-  });
+  document.getElementById('back-btn').addEventListener('click', () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; } };);
 
   const board = document.getElementById('board');
   
@@ -285,9 +283,7 @@ function endGame(win, reason = '') {
       document.getElementById('leaderboard-view-section').style.display = 'block';
   });
   
-  document.getElementById('home-btn')?.addEventListener('click', () => {
-    if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
-  });
+  document.getElementById('home-btn')?.addEventListener('click', () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; } };);
 }
 
 // Start

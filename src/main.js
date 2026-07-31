@@ -11,7 +11,7 @@ const GAMES = [
     emoji: '🥮',
     title: 'Hứng Bánh Trung Thu',
     desc: 'Di chuyển giỏ để hứng bánh nướng, lồng đèn rơi từ trên trời. Né tránh bom và đá!',
-    path: '/src/games/01-catching/index.html',
+    path: import.meta.env.BASE_URL + 'src/games/01-catching/index.html',
     color: '#FF6B35',
   },
   {
@@ -19,7 +19,7 @@ const GAMES = [
     emoji: '🐭',
     title: 'Đập Chuột Cứu Bánh',
     desc: 'Đập nhanh tay vào lũ chuột đang ăn trộm bánh! Cẩn thận đừng đập trúng Thỏ Ngọc!',
-    path: '/src/games/02-whack/index.html',
+    path: import.meta.env.BASE_URL + 'src/games/02-whack/index.html',
     color: '#DC143C',
   },
   {
@@ -27,7 +27,7 @@ const GAMES = [
     emoji: '🐰',
     title: 'Thỏ Ngọc Bay Lên Trăng',
     desc: 'Giúp Thỏ Ngọc bay vượt qua chướng ngại vật để về cung trăng. Bay cao bay xa!',
-    path: '/src/games/03-flappy/index.html',
+    path: import.meta.env.BASE_URL + 'src/games/03-flappy/index.html',
     color: '#FFD700',
   },
   {
@@ -35,7 +35,7 @@ const GAMES = [
     emoji: '🃏',
     title: 'Trí Nhớ Đêm Trăng',
     desc: 'Lật thẻ bài tìm các cặp hình giống nhau. Lật nhanh để đạt điểm cao hơn!',
-    path: '/src/games/04-memory/index.html',
+    path: import.meta.env.BASE_URL + 'src/games/04-memory/index.html',
     color: '#3B82F6',
   },
   {
@@ -43,7 +43,7 @@ const GAMES = [
     emoji: '🏃',
     title: 'Thỏ Ngọc Chạy Trốn',
     desc: 'Dùng WASD để điều khiển Thỏ Ngọc né tránh bầy rắn đang lao đến từ mọi hướng!',
-    path: '/src/games/05-survival/index.html',
+    path: import.meta.env.BASE_URL + 'src/games/05-survival/index.html',
     color: '#10B981',
   },
 ];

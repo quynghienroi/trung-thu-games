@@ -222,7 +222,7 @@ class Game {
     const backBtn = document.createElement('button');
     backBtn.className = 'back-btn';
     backBtn.innerHTML = '🏠';
-    backBtn.onclick = () => window.location.href = '/';
+    backBtn.onclick = () => window.location.href = import.meta.env.BASE_URL;
     backBtn.style.pointerEvents = 'auto';
     this.hud.appendChild(backBtn);
     
@@ -311,7 +311,7 @@ class Game {
     
     const homeBtn = screen.querySelector('#home-btn');
     if (homeBtn) {
-        homeBtn.onclick = () => window.location.href = '/';
+        homeBtn.onclick = () => window.location.href = import.meta.env.BASE_URL;
     }
   }
   

@@ -116,7 +116,7 @@ function initGame() {
   `;
   
   document.getElementById('back-btn').addEventListener('click', () => {
-    window.location.href = '/';
+    window.location.href = import.meta.env.BASE_URL;
   });
 
   const board = document.getElementById('board');
@@ -286,7 +286,7 @@ function endGame(win, reason = '') {
   });
   
   document.getElementById('home-btn')?.addEventListener('click', () => {
-    window.location.href = '/';
+    window.location.href = import.meta.env.BASE_URL;
   });
 }
 

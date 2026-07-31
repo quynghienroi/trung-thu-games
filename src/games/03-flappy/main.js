@@ -183,7 +183,7 @@ function showGameOver() {
       document.getElementById('leaderboard-view-section').style.display = 'block';
   });
   
-  document.getElementById('btn-home')?.addEventListener('click', () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() } };);
+  document.getElementById('btn-home')?.addEventListener('click', () => { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() });
   createBackButton();
 }
 
@@ -196,7 +196,7 @@ function createBackButton() {
     backBtn.style.cssText = 'position: absolute; top: 20px; left: 20px; font-size: 2rem; cursor: pointer; z-index: 100; background: rgba(0,0,0,0.3); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; padding-bottom: 5px;';
     backBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() }
+      (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })()
     });
     uiOverlay.appendChild(backBtn);
   }

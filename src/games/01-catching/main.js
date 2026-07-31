@@ -389,7 +389,7 @@ function startGame() {
     backBtn.style.cursor = 'pointer';
     backBtn.style.backdropFilter = 'blur(4px)';
     backBtn.innerText = 'Trở Về';
-    backBtn.onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() } };
+    backBtn.onclick = () => (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })()
     uiOverlay.appendChild(backBtn);
     
     let timerInterval = setInterval(() => {
@@ -482,7 +482,7 @@ function endGame() {
         document.getElementById('leaderboard-view-section').style.display = 'block';
     };
     
-    document.getElementById('home-btn')?.addEventListener('click', () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() } };);
+    document.getElementById('home-btn')?.addEventListener('click', () => { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() });
 }
 
 function showStartScreen() {
@@ -520,7 +520,7 @@ function showStartScreen() {
     uiOverlay.appendChild(overlay);
     
     document.getElementById('start-btn').onclick = startGame;
-    document.getElementById('back-btn-start').onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() } };
+    document.getElementById('back-btn-start').onclick = () => { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() };
 }
 
 async function initGame() {

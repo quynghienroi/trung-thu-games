@@ -8,7 +8,9 @@ export function createBackButton(container) {
   btn.id = 'back-btn';
   btn.innerHTML = '←';
   btn.title = 'Về trang chủ';
-  btn.addEventListener('click', () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() } };);
+  btn.addEventListener('click', () => {
+    (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })()
+  });
   container.appendChild(btn);
   return btn;
 }

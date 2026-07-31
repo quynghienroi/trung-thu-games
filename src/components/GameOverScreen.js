@@ -61,7 +61,7 @@ export function createGameOverScreen(container, { score, bestScore, isNewBest, o
 
   overlay.querySelector('#btn-home').addEventListener('click', () => {
     if (onHome) onHome();
-    else window.location.href = import.meta.env.BASE_URL;
+    else if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
   });
 
   return overlay;

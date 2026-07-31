@@ -116,7 +116,7 @@ function initGame() {
   `;
   
   document.getElementById('back-btn').addEventListener('click', () => {
-    window.location.href = import.meta.env.BASE_URL;
+    if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
   });
 
   const board = document.getElementById('board');
@@ -286,7 +286,7 @@ function endGame(win, reason = '') {
   });
   
   document.getElementById('home-btn')?.addEventListener('click', () => {
-    window.location.href = import.meta.env.BASE_URL;
+    if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; }
   });
 }
 

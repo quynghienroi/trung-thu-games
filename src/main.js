@@ -196,12 +196,12 @@ function initRoulette() {
         
         // Auto redirect after 4 seconds
         const autoPlayTimeout = setTimeout(() => {
-          window.location.href = gameUrlWithChallenge;
+          openGameInIframe(gameUrlWithChallenge);
         }, 4000);
         
         spinBtn.onclick = () => {
           clearTimeout(autoPlayTimeout);
-          window.location.href = gameUrlWithChallenge;
+          openGameInIframe(gameUrlWithChallenge);
         };
         
       }, 5000);
@@ -209,6 +209,56 @@ function initRoulette() {
     }, 6500);
   });
 }
+
+// ── Iframe SPA Logic ──
+function openGameInIframe(url) {
+  // Hide hub content
+  document.querySelector('.hub-content').style.display = 'none';
+  document.getElementById('hub-bg').style.display = 'none';
+  
+  const iframe = document.createElement('iframe');
+  iframe.id = 'game-iframe';
+  iframe.src = url;
+  iframe.style.position = 'fixed';
+  iframe.style.inset = '0';
+  iframe.style.width = '100vw';
+  iframe.style.height = '100vh';
+  iframe.style.border = 'none';
+  iframe.style.zIndex = '999999';
+  iframe.style.background = '#0a0a2a';
+  document.body.appendChild(iframe);
+}
+
+window.addEventListener('message', (e) => {
+  if (e.data === 'close-game') {
+    const iframe = document.getElementById('game-iframe');
+    if (iframe) iframe.remove();
+    
+    // Restore hub
+    document.querySelector('.hub-content').style.display = 'flex';
+    document.getElementById('hub-bg').style.display = 'block';
+    
+    // Reset spin button state
+    const spinBtn = document.getElementById('spin-btn');
+    spinBtn.innerHTML = 'BẮT ĐẦU QUAY';
+    spinBtn.classList.remove('ready', 'spinning');
+    spinBtn.disabled = false;
+    
+    // Reset challenge display
+    document.getElementById('challenge-roulette').style.display = 'none';
+    
+    // Remove inline styles from strips
+    const strip = document.getElementById('roulette-strip');
+    strip.style.transition = 'none';
+    strip.style.transform = 'translateX(0px)';
+    Array.from(strip.children).forEach(c => {
+      c.style.opacity = 1;
+      c.style.transform = 'scale(1)';
+      c.style.borderColor = 'transparent';
+      c.style.boxShadow = 'none';
+    });
+  }
+});
 
 // ── Animated Background ──
 function initBackground() {

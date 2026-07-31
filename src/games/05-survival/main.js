@@ -566,9 +566,9 @@ function showStartScreen() {
 
 async function initGame() {
     try {
-        sprites.bunny = await loadSprite(import.meta.env.BASE_URL + 'assets/');
-        sprites.snake = await loadSprite(import.meta.env.BASE_URL + 'assets/');
-        sprites.mooncake = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        sprites.bunny = await loadSprite(import.meta.env.BASE_URL + 'assets/bunny.jpg');
+        sprites.snake = await loadSprite(import.meta.env.BASE_URL + 'assets/snake.jpg');
+        sprites.mooncake = await loadSprite(import.meta.env.BASE_URL + 'assets/mooncake.jpg');
     } catch(e) {
         console.error('Lỗi khi tải assets:', e);
     }

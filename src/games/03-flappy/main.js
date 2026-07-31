@@ -414,11 +414,11 @@ function loop(timestamp) {
 
 async function start() {
     try {
-        sprites.bunny = await loadSprite(import.meta.env.BASE_URL + 'assets/');
-        sprites.moon = await loadSprite(import.meta.env.BASE_URL + 'assets/');
-        sprites.bamboo = await loadSprite(import.meta.env.BASE_URL + 'assets/');
-        sprites.star = await loadSprite(import.meta.env.BASE_URL + 'assets/');
-        sprites.mooncake = await loadSprite(import.meta.env.BASE_URL + 'assets/');
+        sprites.bunny = await loadSprite(import.meta.env.BASE_URL + 'assets/bunny.jpg');
+        sprites.moon = await loadSprite(import.meta.env.BASE_URL + 'assets/moon.jpg');
+        sprites.bamboo = await loadSprite(import.meta.env.BASE_URL + 'assets/bamboo.jpg');
+        sprites.star = await loadSprite(import.meta.env.BASE_URL + 'assets/star.jpg');
+        sprites.mooncake = await loadSprite(import.meta.env.BASE_URL + 'assets/mooncake.jpg');
     } catch(e) { console.error('Lỗi tải ảnh:', e); }
 
     showStartScreen();

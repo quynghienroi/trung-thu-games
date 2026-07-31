@@ -46,9 +46,13 @@
 
 .memory-card.matched {
   transform: rotateY(180deg) scale(0.95);
-  opacity: 0.8;
   pointer-events: none;
-  animation: pulse-glow 2s infinite alternate;
+}
+
+.memory-card.matched .memory-card-front {
+  filter: brightness(0.4) grayscale(0.5); /* Tối đi (dimmed) */
+  background: rgba(100, 100, 100, 0.95);
+  border: 2px solid #555;
 }
 
 .memory-card-face {

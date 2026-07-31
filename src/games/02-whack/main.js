@@ -222,7 +222,7 @@ class Game {
     const backBtn = document.createElement('button');
     backBtn.className = 'back-btn';
     backBtn.innerHTML = '🏠';
-    backBtn.onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; } };
+    backBtn.onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() } };
     backBtn.style.pointerEvents = 'auto';
     this.hud.appendChild(backBtn);
     
@@ -311,7 +311,7 @@ class Game {
     
     const homeBtn = screen.querySelector('#home-btn');
     if (homeBtn) {
-        homeBtn.onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { window.location.href = import.meta.env.BASE_URL; } };
+        homeBtn.onclick = () => { if(window.parent !== window) { window.parent.postMessage('close-game', '*'); } else { (function(){ if(window.parent !== window) window.parent.postMessage('close-game', '*'); else window.location.href = import.meta.env.BASE_URL; })() } };
   }
   
   start() {

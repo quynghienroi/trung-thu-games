@@ -279,7 +279,7 @@ class Game {
   showGameOverScreen() {
     const screen = document.createElement('div');
     screen.className = 'modal-overlay';
-    const snapshotHtml = window.playerSnapshot ? `<p style="margin: 5px 0; font-size: 0.9em; color: var(--color-primary);">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="max-width: 200px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid var(--color-primary);" />` : '';
+    const snapshotHtml = window.playerSnapshot ? `<p style="margin: 5px 0; font-size: 0.9em; color: var(--color-primary);">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="width: 100%; max-width: 400px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid var(--color-primary);" />` : '';
     
     screen.innerHTML = `
       <div class="modal-content" style="text-align: center; color: #333;">

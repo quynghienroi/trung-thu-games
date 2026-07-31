@@ -249,7 +249,7 @@ function endGame(win, reason = '') {
     score += timeRemaining * 10;
   }
   
-  const snapshotHtml = window.playerSnapshot ? `<br/><p style="margin: 5px 0; font-size: 0.9em; color: #ffeb3b;">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="max-width: 200px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid #ffeb3b;" />` : '';
+  const snapshotHtml = window.playerSnapshot ? `<br/><p style="margin: 5px 0; font-size: 0.9em; color: #ffeb3b;">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="width: 100%; max-width: 400px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid #ffeb3b;" />` : '';
   
   const titleText = win ? 'Chiến Thắng!' : (reason || 'Hết Giờ!');
   

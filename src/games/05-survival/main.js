@@ -495,7 +495,7 @@ function endGame() {
     menu.style.fontFamily = 'Nunito, sans-serif';
     menu.style.color = '#333';
     
-    const snapshotHtml = window.playerSnapshot ? `<p style="margin: 5px 0; font-size: 0.9em; color: #10B981;">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="max-width: 200px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid #10B981;" />` : '';
+    const snapshotHtml = window.playerSnapshot ? `<p style="margin: 5px 0; font-size: 0.9em; color: #10B981;">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="width: 100%; max-width: 400px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid #10B981;" />` : '';
     
     menu.innerHTML = `
         <h2 style="font-size: 2em; margin-bottom: 20px; color: #ef4444; margin-top:0;">Bạn Đã Bị Cắn!</h2>

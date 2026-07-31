@@ -452,7 +452,7 @@ function endGame() {
     menu.style.fontFamily = 'Nunito, sans-serif';
     menu.style.color = '#333'; // FIX: Explicitly set dark color for text
     
-    const snapshotHtml = window.playerSnapshot ? `<p style="margin: 5px 0; font-size: 0.9em; color: #FF6B35;">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="max-width: 200px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid #ff5722;" />` : '';
+    const snapshotHtml = window.playerSnapshot ? `<p style="margin: 5px 0; font-size: 0.9em; color: #FF6B35;">Phần quà bất ngờ!</p><img src="${window.playerSnapshot}" style="width: 100%; max-width: 400px; border-radius: 10px; margin: 10px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 3px solid #ff5722;" />` : '';
     
     menu.innerHTML = `
         <h2 style="font-size: 2em; margin-bottom: 10px; color: #ff5722; margin-top:0;">Hết Giờ!</h2>
